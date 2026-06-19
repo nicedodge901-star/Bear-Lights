@@ -36,7 +36,7 @@ bear-light/
 
 **`SKILL.md`** — The core of the skill. Defines the step-by-step workflow the AI follows: collecting the school header, choosing Weekly vs. Daily format, reading uploaded modules, drafting in markdown, rendering a visual preview, and exporting to `.docx`. It also encodes the operating principles — no emojis in official documents, bold-flag all uncertain content, never invent competency codes.
 
-**`assets/dll_weekly_blank.docx`** and **`assets/dll_daily_blank.docx`** — The actual blank DepEd templates, sourced from Castillejos National High School's official documents. These are used at the export stage: the AI fills content into the existing table structure rather than building from scratch, which preserves the original formatting (Montserrat font, borders, layout) exactly.
+**`assets/dll_weekly_blank.docx`** and **`assets/dll_daily_blank.docx`** — The actual blank DepEd templates. These are used at the export stage: the AI fills content into the existing table structure rather than building from scratch, which preserves the original formatting (Montserrat font, borders, layout) exactly.
 
 **`references/dll_template.md`** — A plain-text breakdown of both DLL formats, showing which sections are shared and which fork by day. The AI uses this as the authoritative section structure during drafting. The one structural difference between Weekly and Daily formats is documented here precisely: only the "Learning Competency" and "Learning Objectives" rows split into Day 1–5 columns in the Daily format — everything else stays a single block.
 
@@ -101,7 +101,7 @@ No installation, no code, no API keys needed on the teacher's end. The skill run
 - **Competency codes are not auto-filled.** The skill will always ask the teacher to verify MATATAG codes rather than generate them. This is a feature, not a missing piece.
 - **Learner Context cannot be pre-filled.** The AI has no knowledge of the actual class — this section always requires the teacher's own input.
 - **The Reflections section is intentionally left as prompts** in the initial export, because the week hasn't happened yet at drafting time.
-- **The `.docx` templates are specific to Castillejos National High School's letterhead.** Teachers from other schools will need to update the header or replace the template assets.
+- **The `.docx` templates are universal to the School's letterhead.**
 
 ---
 
